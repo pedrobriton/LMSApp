@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aurelianos Bar</string>
+    <string name="mensagem_inicial">Bem-vindos</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar">atualizar</string>
+    <string name="action_config">Configuraçōes</string>
+
+</resources>
