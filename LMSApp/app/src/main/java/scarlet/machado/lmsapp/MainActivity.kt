@@ -13,6 +13,7 @@ class MainActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+        /*variáveis padrões*/
         var nome_padrao = "aluno"
         var senha_padrao = "impacta"
 
