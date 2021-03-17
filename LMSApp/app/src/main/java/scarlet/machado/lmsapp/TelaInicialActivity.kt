@@ -19,8 +19,8 @@ class TelaInicialActivity : DebugActivity() {
 
         setSupportActionBar(toolbar)
 
-        supportActionBar?.title = "Cardápio"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "TELA PRINCIPAL"
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
     }
 

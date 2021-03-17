@@ -21,8 +21,8 @@ class MainActivity : DebugActivity() {
         image_login.setImageResource(R.drawable.imagem_login)
 */
 
-        botao_login.setOnClickListener{
-            val nome = campo_usuario.text.toString()
+        botao_login.setOnClickListener {
+            /* val nome = campo_usuario.text.toString()
             val senha = campo_senha.text.toString()
 
             if (nome == "" || senha == ""){
@@ -32,7 +32,7 @@ class MainActivity : DebugActivity() {
             else{
                 if (nome != nome_padrao  || senha != senha_padrao) {
                     Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, MainActivity::class.java) /*volta pra activity de login*/
+                    val intent = Intent(this, MainActivity::class.java) *//*volta pra activity de login*//*
                 } else {
                     Toast.makeText(this, "Validado", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, TelaInicialActivity ::class.java)
@@ -46,13 +46,11 @@ class MainActivity : DebugActivity() {
             params.putIntegerArrayList("array_numeros", array)
 
             intent.putExtras(params)
-            intent.putExtra("outro_parametro", true)
+            intent.putExtra("outro_parametro", true)*/
+            val intent = Intent(this, TelaInicialActivity::class.java)
 
             startActivity(intent)
         }
-
-            }
-
-        }
     }
 }
+
