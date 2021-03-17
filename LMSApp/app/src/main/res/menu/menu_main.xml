@@ -2,6 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
+    <item
+        android:id="@+id/action_add"
+        android:title="@string/adicionar"
+        android:icon="@drawable/ic_adicionar_white"
+        app:showAsAction="ifRoom"
+        />
+
+
     <item
         android:id="@+id/action_buscar"
         android:title="@string/action_buscar"
@@ -16,18 +26,17 @@
         app:showAsAction="ifRoom"
         />
 
-    <item
-        android:id="@+id/action_add"
-        android:title="@string/adicionar"
-        android:icon="@drawable/ic_adicionar_white"
-        app:showAsAction="ifRoom"
-
-        />
 
     <item
         android:id="@+id/action_confg"
         android:title="@string/action_config"
         android:icon="@drawable/ic_configuracoes_white"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/action_sair"
+        android:title="@string/sair"
         app:showAsAction="never"
         />
 
