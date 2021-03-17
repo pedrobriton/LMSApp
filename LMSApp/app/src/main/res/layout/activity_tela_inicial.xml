@@ -8,42 +8,56 @@
     tools:context=".TelaInicialActivity"
     tools:ignore="ExtraText">
 
-    <include layout="@layout/toolbar"></include>
+    <include
+        android:id="@+id/include5"
+        layout="@layout/toolbar"></include>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/abrir_cardapio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:text="Button"
+        android:layout_marginTop="12dp"
+        android:text="ABRIR CARDAPIO"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include4"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/anotar_pedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="159dp"
-        android:text="Button"
+        android:text="ANOTAR PEDIDO"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/abrir_cardapio" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/comandas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Button"
+        android:layout_marginTop="20dp"
+        android:text="COMANDAS"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/anotar_pedido" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="101dp"
+        android:gravity="center"
+        android:text="OPÇÕES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include5" />
 
 
     <!--<ProgressBar
