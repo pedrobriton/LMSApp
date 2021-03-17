@@ -18,7 +18,6 @@ class CadastrarActivity : DebugActivity() {
         return true
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
 
