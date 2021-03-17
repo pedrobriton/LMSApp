@@ -31,7 +31,7 @@ class MainActivity : DebugActivity() {
             }
             else{
                 if (nome != nome_padrao  || senha != senha_padrao) {
-                    Toast.makeText(this, "Usuário ou senha Inválido", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, MainActivity::class.java) /*volta pra activity de login*/
                 } else {
                     Toast.makeText(this, "Validado", Toast.LENGTH_LONG).show()
@@ -39,7 +39,7 @@ class MainActivity : DebugActivity() {
 
             val params = Bundle()
             params.putString("nome", nome)
-            params.putInt("numero",10)
+            params.putInt("numero", 10)
             var array: ArrayList<Int> = ArrayList<Int>()
             array.add(10)
             array.add(20)
