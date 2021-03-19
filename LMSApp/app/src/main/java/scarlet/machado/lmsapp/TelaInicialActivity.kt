@@ -15,16 +15,14 @@ class TelaInicialActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
 
- /*       var params = intent.extras
+
+        var params = intent.extras
         val nome = params?.getString("nome")
-        Toast.makeText(this, "Nome do usuário $nome", Toast.LENGTH_LONG).show()
-*/
+        Toast.makeText(this, "Nome do usuário $nome",
+                Toast.LENGTH_LONG).show()
         setSupportActionBar(toolbar)
-
-        val abrir_cardapio = "cardapio"
-
         supportActionBar?.title = "TELA PRINCIPAL"
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled // seta para voltar
 
 
 
@@ -33,6 +31,7 @@ class TelaInicialActivity : DebugActivity() {
         val btn_pedido = findViewById<Button>(R.id.anotar_pedido)
 
 
+        /*CONFIGURANDO OS BOTÕES */
         btn_cardapio.setOnClickListener(View.OnClickListener {
 
             val intent = Intent(this, AcoesBtnActivity::class.java) /*enviar para tela de cadastro*/
@@ -40,8 +39,12 @@ class TelaInicialActivity : DebugActivity() {
                     Toast.LENGTH_LONG).show()
             startActivity(intent)
         })
-
-
+        btn_pedido.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, AcoesBtnActivity::class.java)/* enviar para tela de cadastro*/
+            Toast.makeText(this, " NAO IMPLEMENTADO",
+                    Toast.LENGTH_LONG).show()
+            startActivity(intent)
+        })
         btn_comanda.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, AcoesBtnActivity::class.java) /*enviar para tela de cadastro*/
             Toast.makeText(this, " NAO IMPLEMENTADO",
@@ -49,19 +52,15 @@ class TelaInicialActivity : DebugActivity() {
             startActivity(intent)
         })
 
-        btn_pedido.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, AcoesBtnActivity::class.java) /*enviar para tela de cadastro*/
-            Toast.makeText(this, " NAO IMPLEMENTADO",
-                    Toast.LENGTH_LONG).show()
-            startActivity(intent)
-        })
     }
 
+    /*INFLANDO O MENU*/
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
+    /*COLOCANDO OPÇÕES NO MENU*/
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
 
@@ -81,6 +80,7 @@ class TelaInicialActivity : DebugActivity() {
                     Toast.LENGTH_LONG).show()
             val intent = Intent(this, MainActivity::class.java) /*enviar para tela de cadastro*/
             startActivity(intent)
+            finish()
 
         }
         else if (id == R.id.action_atualizar){

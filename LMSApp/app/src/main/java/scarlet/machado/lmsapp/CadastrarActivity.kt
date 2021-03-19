@@ -11,6 +11,8 @@ class CadastrarActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastrar)
+
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
     }
@@ -25,7 +27,7 @@ class CadastrarActivity : DebugActivity() {
             finish()
         }
 
-       else if(id == android.R.id.home){
+        else if(id == android.R.id.home){
             finish()
         }
 
@@ -36,4 +38,3 @@ class CadastrarActivity : DebugActivity() {
 
 
 }
-

@@ -14,8 +14,8 @@ class MainActivity : DebugActivity() {
         setContentView(R.layout.login)
 
         /*variáveis padrões*/
-        var nome_padrao = "aluno"
-        var senha_padrao = "impacta"
+        val nome_padrao = "aluno"
+        val senha_padrao = "impacta"
 
 /*
         image_login.setImageResource(R.drawable.imagem_login)
@@ -26,7 +26,7 @@ class MainActivity : DebugActivity() {
             val senha = campo_senha.text.toString()
 
             if (nome == "" || senha == ""){
-                Toast.makeText(this, "Preencher todos os campos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Preencher todos os campos!!!", Toast.LENGTH_LONG).show()
                 campo_usuario.requestFocus()
             }
             else{
@@ -35,7 +35,8 @@ class MainActivity : DebugActivity() {
                     val intent = Intent(this, MainActivity::class.java) /*volta pra activity de login*/
                 } else {
                     Toast.makeText(this, "Validado", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, TelaInicialActivity ::class.java)
+                    val intent = Intent(this, TelaInicialActivity::class.java)
+                    startActivity(intent)}
 
             val params = Bundle()
             params.putString("nome", nome)
@@ -55,4 +56,3 @@ class MainActivity : DebugActivity() {
 
         }
     }
-}
