@@ -50,7 +50,8 @@ class TelaInicialActivity : DebugActivity() {
             Toast.makeText(this, " NAO IMPLEMENTADO",
                     Toast.LENGTH_LONG).show()
             startActivity(intent)
-        })
+        }
+
 
     }
 
