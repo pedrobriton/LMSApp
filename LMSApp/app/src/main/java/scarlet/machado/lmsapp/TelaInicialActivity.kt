@@ -17,11 +17,12 @@ class TelaInicialActivity : DebugActivity() {
 
 
         var params = intent.extras
-        val nome = params?.getString("nome")
+        val nome: String? = params?.getString("nome")
         Toast.makeText(this, "Nome do usuário $nome",
                 Toast.LENGTH_LONG).show()
         setSupportActionBar(toolbar)
         supportActionBar?.title = "TELA PRINCIPAL"
+
 //        supportActionBar?.setDisplayHomeAsUpEnabled // seta para voltar
 
 
@@ -32,6 +33,11 @@ class TelaInicialActivity : DebugActivity() {
 
 
         /*CONFIGURANDO OS BOTÕES */
+        clickBotoes(btn_cardapio, btn_pedido, btn_comanda)
+
+    }
+
+    private fun clickBotoes(btn_cardapio: Button, btn_pedido: Button, btn_comanda: Button) {
         btn_cardapio.setOnClickListener(View.OnClickListener {
 
             val intent = Intent(this, AcoesBtnActivity::class.java) /*enviar para tela de cadastro*/
@@ -50,9 +56,7 @@ class TelaInicialActivity : DebugActivity() {
             Toast.makeText(this, " NAO IMPLEMENTADO",
                     Toast.LENGTH_LONG).show()
             startActivity(intent)
-        }
-
-
+        })
     }
 
     /*INFLANDO O MENU*/
@@ -79,9 +83,11 @@ class TelaInicialActivity : DebugActivity() {
         else if (id == R.id.action_sair){
             Toast.makeText(this, "Botão de sair clicado",
                     Toast.LENGTH_LONG).show()
-            val intent = Intent(this, MainActivity::class.java) /*enviar para tela de cadastro*/
-            startActivity(intent)
             finish()
+            val intent = Intent(this, MainActivity::class.java)/* enviar para tela de cadastro*/
+
+            startActivity(intent)
+
 
         }
         else if (id == R.id.action_atualizar){
@@ -89,7 +95,7 @@ class TelaInicialActivity : DebugActivity() {
                     Toast.LENGTH_LONG).show()
 
         }else if(id == R.id.action_confg){
-            Toast.makeText(this, "Botão de sair clicado",
+            Toast.makeText(this, "BOTÃO DE CONFIGURAR CLICADO",
                     Toast.LENGTH_LONG).show()
             val intent = Intent(this, ConfigurarActivity::class.java) /*enviar para tela de cadastro*/
             startActivity(intent)

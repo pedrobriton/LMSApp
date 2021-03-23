@@ -36,9 +36,10 @@ class MainActivity : DebugActivity() {
                 } else {
                     Toast.makeText(this, "Validado", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, TelaInicialActivity::class.java)
-                    startActivity(intent)}
+                    startActivity(intent)
+                }
 
-            val params = Bundle()
+            /*val params = Bundle()
             params.putString("nome", nome)
             params.putInt("numero", 10)
             var array: ArrayList<Int> = ArrayList<Int>()
@@ -49,7 +50,7 @@ class MainActivity : DebugActivity() {
             intent.putExtras(params)
             intent.putExtra("outro_parametro", true)
 
-            startActivity(intent)
+            startActivity(intent)*/
         }
 
             }
