@@ -21,6 +21,7 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
 
+        /**/
 
         var params = intent.extras
         val nome: String? = params?.getString("nome")
