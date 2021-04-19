@@ -12,4 +12,14 @@
     <string name="LabelTitulo">Essa será a tela de configurações</string>
     <string name="todo">TODO</string>
 
+
+    <string name="mensagem_login">Faça seu login</string>
+    <string name="nome_usuario">Digite seu usuário</string>
+    <string name="informe_senha">Digite sua senha</string>
+    <string name="nav">Abrir</string>
+    <string name="nav_close">Fechar</string>
+    <string name="nav_open">Abrir</string>
+
+
+
 </resources>

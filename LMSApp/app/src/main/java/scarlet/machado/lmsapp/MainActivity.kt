@@ -1,7 +1,6 @@
 package scarlet.machado.lmsapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.login.*
@@ -21,25 +20,25 @@ class MainActivity : DebugActivity() {
         image_login.setImageResource(R.drawable.imagem_login)
 */
 
-        botao_login.setOnClickListener{
+        botao_login.setOnClickListener {
             val nome = campo_usuario.text.toString()
             val senha = campo_senha.text.toString()
 
-            if (nome == "" || senha == ""){
+            if (nome == "" || senha == "") {
                 Toast.makeText(this, "Preencher todos os campos!!!", Toast.LENGTH_LONG).show()
                 campo_usuario.requestFocus()
-            }
-            else{
-                if (nome != nome_padrao  || senha != senha_padrao) {
+            } else {
+                if (nome != nome_padrao || senha != senha_padrao) {
                     Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, MainActivity::class.java) /*volta pra activity de login*/
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)/*volta pra activity de login*/
                 } else {
                     Toast.makeText(this, "Validado", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, TelaInicialActivity::class.java)
                     startActivity(intent)
                 }
 
-            /*val params = Bundle()
+                /*val params = Bundle()
             params.putString("nome", nome)
             params.putInt("numero", 10)
             var array: ArrayList<Int> = ArrayList<Int>()
@@ -51,9 +50,9 @@ class MainActivity : DebugActivity() {
             intent.putExtra("outro_parametro", true)
 
             startActivity(intent)*/
-        }
-
             }
 
         }
+
     }
+}

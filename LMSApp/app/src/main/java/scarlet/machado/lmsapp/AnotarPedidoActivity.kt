@@ -1,30 +1,17 @@
 package scarlet.machado.lmsapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.Toast
 import kotlinx.android.synthetic.main.toolbar.*
 
-class CadastrarActivity : DebugActivity() {
+class AnotarPedidoActivity : DebugActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastrar)
-
+        setContentView(R.layout.anotar_pedido_activity)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "INSERIR PEDIDO"
-
-        val btn_confirm_comanda = findViewById<Button>(R.id.btn_confirmar_comanda)
-
-        btn_confirm_comanda.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, AnotarPedidoActivity::class.java)
-            startActivity(intent)
-        })
-
 
     }
 
@@ -46,8 +33,4 @@ class CadastrarActivity : DebugActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-
-
-
-
 }
