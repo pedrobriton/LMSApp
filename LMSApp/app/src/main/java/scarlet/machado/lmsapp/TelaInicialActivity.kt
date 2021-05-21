@@ -23,12 +23,12 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
 
         /**/
 
-        var params = intent.extras
+     /*   var params = intent.extras
         val nome: String? = params?.getString("nome")
         Toast.makeText(
             this, "Nome do usuário $nome",
             Toast.LENGTH_LONG).show()
-        var numero = params?.getInt("numero")
+        var numero = params?.getInt("numero")*/
 
 /*        setSupportActionBar(toolbar)*/
         supportActionBar?.title = "TELA PRINCIPAL"
@@ -104,12 +104,22 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         override fun onNavigationItemSelected(item: MenuItem): Boolean {
             when(item.itemId){
                 R.id.nav_comanda -> {
-                    val builder = AlertDialog.Builder(this)
+                    val intent = Intent(this, AbrirComandaActivity::class.java)
+                    startActivity(intent)
+
+                    // o trecho abaixo testa se o botão funciona, emitidindo um alerta na tela
+                    /*val builder = AlertDialog.Builder(this)
                     builder.setNeutralButton("OK", null)
                     builder.setTitle("Alerta")
                     val dialog = builder.create()
-                    dialog.show()
+                    dialog.show()*/
 
+                }
+
+                R.id.nav_cardapio -> {
+                    Toast.makeText(this, "Clicou em Cardápio", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, AbrirCardapioActivity::class.java)
+                    startActivity(intent)
                 }
 
                 R.id.nav_pedido -> {

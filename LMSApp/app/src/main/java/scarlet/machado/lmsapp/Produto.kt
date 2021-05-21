@@ -11,3 +11,4 @@ class Produto: Serializable{
     var foto = ""
 
 }
+
